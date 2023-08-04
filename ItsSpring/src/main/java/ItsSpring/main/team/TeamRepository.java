@@ -1,2 +1,7 @@
-package ItsSpring.main.team;public class TeamRepository {
+package ItsSpring.main.team;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TeamRepository extends JpaRepository<Team, Integer> {
+    Team findByName(String name);
 }
